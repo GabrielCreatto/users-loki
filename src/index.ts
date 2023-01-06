@@ -6,7 +6,7 @@ import logger from './utils/users.logger';
 const start = async () => {
 
     const app = await init_routers();
-    const port = process.env.PORT || 3009;
+    const port = process.env.PORT || 3001;
 
     app.listen(port);
 
