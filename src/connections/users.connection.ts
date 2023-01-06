@@ -4,7 +4,7 @@ export const collections: { users?: mongoDB.Collection } = {}
 
 export async function connect_database() {
 
-    const client: mongoDB.MongoClient = new mongoDB.MongoClient(process.env.MONGO_HOST!);
+    const client: mongoDB.MongoClient = new mongoDB.MongoClient(process.env.MONGO_HOST! || 'mongodb://localhost:27017');
 
     await client.connect();
 

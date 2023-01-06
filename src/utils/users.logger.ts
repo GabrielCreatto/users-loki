@@ -4,7 +4,7 @@ import LokiTransport from 'winston-loki';
 const logger = winston.createLogger({
     transports: [
         new LokiTransport({
-            host: process.env.LOKI_HOST!,
+            host: process.env.LOKI_HOST! || 'http://localhost:3100',
             json: true,
             format: winston.format.json(),
             replaceTimestamp: true,
