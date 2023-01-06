@@ -10,7 +10,7 @@ const start = async () => {
 
     app.listen(port);
 
-    logger.info({message: `Application startes at port ${port}`, labels: {'porta':3000, 'applciationName': 'users-loki'}});
+    logger.info({message: `Application startes at port ${port}`, labels: {'porta':3000, 'applciationName': 'users-loki', statusCode: 200}});
     console.log(`Application startes at port ${port}`);
 };
 
