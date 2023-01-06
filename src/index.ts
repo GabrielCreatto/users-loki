@@ -1,14 +1,16 @@
-import { init_routers } from './routers/router';
 import dotenv from 'dotenv';
+dotenv.config();
+import { init_routers } from './routers/users.router';
+import logger from './utils/users.logger';
 
 const start = async () => {
-    dotenv.config();
 
     const app = await init_routers();
     const port = process.env.PORT;
 
     app.listen(port);
 
+    logger.info({message: `Application startes at port ${port}`, labels: {'porta':3000, 'applciationName': 'users-loki'}});
     console.log(`Application startes at port ${port}`);
 };
 
